@@ -16,7 +16,8 @@ public class Bai226equationsolver {
                     JOptionPane.showMessageDialog(null,"Co vo so nghiem", "Ket qua", JOptionPane.INFORMATION_MESSAGE);
                     else
                     JOptionPane.showMessageDialog(null,"Vo nghiem", "Ket qua", JOptionPane.INFORMATION_MESSAGE);
-                } else {
+                } 
+                else {
                     double x =-b /a;
                     JOptionPane.showMessageDialog(null, "x= " + x, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
                 }
@@ -56,10 +57,12 @@ public class Bai226equationsolver {
             double x1=(-bb+Math.sqrt(delta))/(2* aa);
             double x2 = (-bb-Math.sqrt(delta))/(2 * aa);
             thongbao2 = "x1 = " + x1 + "\n x2 = " + x2;
-        } else if (delta == 0) {
+        } 
+        else if (delta == 0) {
             double x = -bb / (2 * aa);
             thongbao2="Phuong trinh co nghiem kep\n x0 = " + x;
-        } else {
+        } 
+        else {
             thongbao2="Phuong trinh vo nghiem";
         }
         JOptionPane.showMessageDialog(null, thongbao2, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
