@@ -31,15 +31,15 @@ public class Bai226equationsolver {
                     double D = a11 *a22 -a12*a21;
                     double Dx = b1 *a22 - b2 *a12;
                     double Dy = a11 *b2 -a21 *b1;
-                    String message;
+                    String thongbao;
                     if (D==0){
-                    message = (Dx==0&&Dy==0)? "Co vo so nghiem" : "Vo nghiem";
+                    thongbao = (Dx==0&&Dy==0)? "Co vo so nghiem" : "Vo nghiem";
                     } else {
                         double x1 = Dx/ D;
                         double x2 = Dy /D;
-                        message = "x1= " + x1 + "\n x2= " +x2;
+                        thongbao = "x1= " + x1 + "\n x2= " +x2;
                     }
-                    JOptionPane.showMessageDialog(null, message, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, thongbao, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
                     break;
                 case "3":
                 double aa = Double.parseDouble(JOptionPane.showInputDialog(null, "a:", "Nhap", JOptionPane.QUESTION_MESSAGE));
@@ -51,18 +51,18 @@ public class Bai226equationsolver {
             return;
         }
         double delta=bb*bb-4*aa*cc;
-        String message2;
+        String thongbao2;
         if (delta > 0) {
             double x1=(-bb+Math.sqrt(delta))/(2* aa);
             double x2 = (-bb-Math.sqrt(delta))/(2 * aa);
-            message2 = "x1 = " + x1 + "\n x2 = " + x2;
+            thongbao2 = "x1 = " + x1 + "\n x2 = " + x2;
         } else if (delta == 0) {
             double x = -bb / (2 * aa);
-            message2="Phuong trinh co nghiem kep\n x0 = " + x;
+            thongbao2="Phuong trinh co nghiem kep\n x0 = " + x;
         } else {
-            message2="Phuong trinh vo nghiem";
+            thongbao2="Phuong trinh vo nghiem";
         }
-        JOptionPane.showMessageDialog(null, message2, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, thongbao2, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
         break;
         default:
             JOptionPane.showMessageDialog(null, "Cam on da dung cong cu", "Thoat",JOptionPane.INFORMATION_MESSAGE);
