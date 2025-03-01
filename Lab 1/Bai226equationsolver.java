@@ -28,16 +28,16 @@ public class Bai226equationsolver {
                     double a21=Double.parseDouble(JOptionPane.showInputDialog(null, "a21: ", "Nhap", JOptionPane.QUESTION_MESSAGE));
                     double a22=Double.parseDouble(JOptionPane.showInputDialog(null, "a22: ", "Nhap", JOptionPane.QUESTION_MESSAGE));
                     double b2=Double.parseDouble(JOptionPane.showInputDialog(null, "b2: ", "Nhap", JOptionPane.QUESTION_MESSAGE));
-                    double D = a11 * a22 - a12 * a21;
-                    double Dx = b1 * a22 - b2 * a12;
-                    double Dy = a11 * b2 - a21 * b1;
+                    double D = a11 *a22 -a12*a21;
+                    double Dx = b1 *a22 - b2 *a12;
+                    double Dy = a11 *b2 -a21 *b1;
                     String message;
                     if (D==0){
-                    message = (Dx==0&&Dy== 0) ? "Co vo so nghiem" : "Vo nghiem";
+                    message = (Dx==0&&Dy==0)? "Co vo so nghiem" : "Vo nghiem";
                     } else {
-                        double x1 = Dx / D;
-                        double x2 = Dy / D;
-                        message = "x1= " + x1 + "\n x2= " + x2;
+                        double x1 = Dx/ D;
+                        double x2 = Dy /D;
+                        message = "x1= " + x1 + "\n x2= " +x2;
                     }
                     JOptionPane.showMessageDialog(null, message, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
                     break;
@@ -58,14 +58,14 @@ public class Bai226equationsolver {
             message2 = "x1 = " + x1 + "\n x2 = " + x2;
         } else if (delta == 0) {
             double x = -bb / (2 * aa);
-            message2 = "Phuong trinh co nghiem kep\n x0 = " + x;
+            message2="Phuong trinh co nghiem kep\n x0 = " + x;
         } else {
-            message2 = "Phuong trinh vo nghiem";
+            message2="Phuong trinh vo nghiem";
         }
         JOptionPane.showMessageDialog(null, message2, "Ket qua", JOptionPane.INFORMATION_MESSAGE);
         break;
         default:
-            JOptionPane.showMessageDialog(null, "Cam on da dung cong cu", "Thoat", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cam on da dung cong cu", "Thoat",JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }
