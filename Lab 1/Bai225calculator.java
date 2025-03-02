@@ -1,5 +1,5 @@
 import javax.swing.JOptionPane;
-public class Bai225calculatorulator
+public class Bai225calculator
  {
     public static void main(String[] args) {
         String sothunhat=JOptionPane.showInputDialog(null,"nhap so thu nhat:","nhap",JOptionPane.INFORMATION_MESSAGE);
