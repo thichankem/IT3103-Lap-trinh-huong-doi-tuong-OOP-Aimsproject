@@ -57,9 +57,9 @@ public class Bai65array
         {
             tong+=mang[i];
         }
-        double average=(double) tong/n;
+        double trungbinh=(double) tong/n;
         System.out.println("Tong cac phan tu trong mang la: "+tong);
-        System.out.println("Trung binh cong cac phan tu trong mang la: "+average);
+        System.out.println("Trung binh cong cac phan tu trong mang la: "+trungbinh);
         so.close();
     }
 }
