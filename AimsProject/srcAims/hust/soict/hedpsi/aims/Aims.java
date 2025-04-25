@@ -1,6 +1,5 @@
-import Cart;
-import DigitalVideoDisc;
-package hust.soict.dsai.aims;
+import hust.soict.hedpsi.cart;
+import hust.soict.hedpsi.aims.disc;
 public class Aims {
     public static void main(String[] args) 
     {
