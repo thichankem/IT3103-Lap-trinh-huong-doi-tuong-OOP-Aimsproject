@@ -12,7 +12,6 @@ public abstract class Media {
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
     public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
 
-    //constructor
     public Media(String title){
         this.id = ++nbMedia;
         this.title = title;
@@ -81,15 +80,10 @@ public abstract class Media {
         System.out.println("---------------END-----------------");
     }
 
-
     @Override
     public String toString() {
         return "Media [id=" + '\'' + id + '\'' + ", title=" + '\'' + title  + '\''
                 + ", category=" + category+ ", cost=" + cost + "]";
     }
-
-
-
-
 
 }
