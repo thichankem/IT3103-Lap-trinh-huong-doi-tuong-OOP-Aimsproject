@@ -36,7 +36,6 @@ public class Store {
         }
   }
 
-    // Getter and Setter
     public List<Media> getItemsInStore() {
         return itemsInStore;
     }
