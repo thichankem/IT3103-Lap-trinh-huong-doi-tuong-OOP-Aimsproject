@@ -3,8 +3,7 @@ package hust.soict.hedspi.aims.media;
 public abstract class Disc extends Media {
     private String director;
     private int length;
-
-    //constructor
+    
     public Disc(String title) {
 
         super(title);

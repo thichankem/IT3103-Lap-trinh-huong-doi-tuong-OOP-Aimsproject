@@ -5,8 +5,6 @@ import java.util.List;
 public class Book extends Media{
     private List<String> authors = new ArrayList<String>();
 
-    //Constructor
-
     public Book(String title) {
         super(title);
     }
@@ -42,7 +40,6 @@ public class Book extends Media{
         } else {
             System.out.println("The author " + authorName + " is not in the store");
         }
-
 
     }
 
