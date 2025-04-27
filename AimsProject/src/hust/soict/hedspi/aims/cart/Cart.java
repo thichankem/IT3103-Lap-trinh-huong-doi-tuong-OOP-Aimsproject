@@ -1,25 +1,21 @@
 package hust.soict.hedspi.aims.cart;
 import hust.soict.hedspi.aims.media.DigitalVideoDisc;
 import hust.soict.hedspi.aims.media.Media;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED =20;
-
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
-
     public void addMedia(Media media) {
         if(itemsOrdered.size() >= MAX_NUMBERS_ORDERED) {
             System.out.println("The cart is full");
-        }else{
+        }else
+        {
             itemsOrdered.add(media);
             System.out.println("Added item" + media.getTitle() +  "to the cart");
         }
     }
-
     public void removeMedia(Media media) {
         if(itemsOrdered.contains(media)) {
             itemsOrdered.remove(media);
@@ -28,9 +24,6 @@ public class Cart {
             System.out.println("The cart has no item" + media.getTitle());
         }
     }
-
-
-
     public void printCart(){
         System.out.println("***********************CART***********************\n");
         for(int i = 0; i < itemsOrdered.size(); i++){
@@ -40,10 +33,6 @@ public class Cart {
         System.out.println("***********************CART***********************\n");
 
     }
-
-
-
-
     public float totalCost(){
          float  total = 0;
         for(Media media : itemsOrdered){
@@ -51,8 +40,6 @@ public class Cart {
         }
         return total;
     }
-
-
     public void searchByTitle(String title){
         boolean found = false;
         for(int i =0; i< itemsOrdered.size();i++){
@@ -85,24 +72,17 @@ public class Cart {
         }
         return null;
     }
-
     public void emptyCart() {
         itemsOrdered.clear();
         System.out.println("Cart is empty!");
     }
-
     public List<Media> getItemsOrdered() {
         return itemsOrdered;
     }
-
     public void sortByTitleCost() {
         Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
     }
-
     public void sortByCostTitle() {
         Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
     }
-
-
-
 }
