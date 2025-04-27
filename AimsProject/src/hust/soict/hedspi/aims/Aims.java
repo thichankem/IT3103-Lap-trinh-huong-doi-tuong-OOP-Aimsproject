@@ -31,7 +31,14 @@ public class Aims
     int i;
         do 
         {
-            showMenu();
+        System.out.println("AIMS: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. View store");
+        System.out.println("2. Update store");
+        System.out.println("3. See current cart");
+        System.out.println("0. Exit");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3");
             i = scanner.nextInt();
             scanner.nextLine();
             switch (i)
@@ -55,24 +62,21 @@ public class Aims
         while (i!=0);
         scanner.close();
     }
-    public static void showMenu () 
-    {
-        System.out.println("AIMS: ");
-        System.out.println("--------------------------------");
-        System.out.println("1. View store");
-        System.out.println("2. Update store");
-        System.out.println("3. See current cart");
-        System.out.println("0. Exit");
-        System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3");
-    }
     public static void viewStore(Store store, Cart cart, Scanner scanner) 
     {
         store.displayStore();
         int i;
         do
         {
-            storeMenu();
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. See a media’s details");
+        System.out.println("2. Add a media to cart");
+        System.out.println("3. Play a media");
+        System.out.println("4. See current cart");
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3-4");
             i = scanner.nextInt();
             scanner.nextLine();
             switch (i) {
@@ -96,18 +100,6 @@ public class Aims
         } 
         while (i!=0);
     }
-    public static void storeMenu() 
-    {
-        System.out.println("Options: ");
-        System.out.println("--------------------------------");
-        System.out.println("1. See a media’s details");
-        System.out.println("2. Add a media to cart");
-        System.out.println("3. Play a media");
-        System.out.println("4. See current cart");
-        System.out.println("0. Back");
-        System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3-4");
-    }
     public static void seeMediaDetails(Store store, Cart cart, Scanner scanner) 
     {
         System.out.print("Enter the title: ");
@@ -117,7 +109,13 @@ public class Aims
             media.displayDetails();
             int i;
             do {
-                mediaDetailsMenu();
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. Add to cart");
+        System.out.println("2. Play");
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2");
                 i = scanner.nextInt();
                 scanner.nextLine(); 
                 switch (i) 
@@ -141,16 +139,6 @@ public class Aims
         }
         else 
             System.out.println("Media not found.");
-    }
-    public static void mediaDetailsMenu() 
-    {
-        System.out.println("Options: ");
-        System.out.println("--------------------------------");
-        System.out.println("1. Add to cart");
-        System.out.println("2. Play");
-        System.out.println("0. Back");
-        System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2");
     }
     public static void addMediaToCart(Store store, Cart cart, Scanner scanner) 
     {
@@ -183,7 +171,7 @@ public class Aims
         System.out.println("2. Remove a media from store");
         System.out.println("0. Back");
         System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2")
+        System.out.println("Please choose a number: 0-1-2");
         int option = scanner.nextInt();
         scanner.nextLine(); 
         switch (option) 
@@ -205,7 +193,6 @@ public class Aims
         System.out.print("Enter the type of media: ");
         String type = scanner.nextLine();
         if (type.equalsIgnoreCase("DVD")) {
-            scanner.nextLine();
             System.out.println("Enter the title:");
             String title = scanner.nextLine();
             System.out.println("Enter the category:");
@@ -270,7 +257,16 @@ public class Aims
         cart.printCart();
         int i;
         do {
-            cartMenu();
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. Filter medias in cart");
+        System.out.println("2. Sort medias in cart");
+        System.out.println("3. Remove media from cart");
+        System.out.println("4. Play a media");
+        System.out.println("5. Place order");
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3-4-5");
             i = scanner.nextInt();
             scanner.nextLine(); 
             switch (i) {
@@ -373,25 +369,17 @@ public class Aims
             System.out.println("Cart is empty");
             return;
         }
-        System.out.println("Placing order for " + cart.getItemsOrdered().size():");
+        System.out.println("Placing order for " + cart.getItemsOrdered().size());
         for (Media media : cart.getItemsOrdered()) {
             System.out.println("- " + media.getTitle() + " (" + media.getCategory() + ")");
         }
         double total = cart.totalCost();
-        System.out.printf("Total cost: $%.2f%n", total);
-        cart.getItemsOrdered().clear();
-        System.out.println("Order placed successfully!");
+        System.out.printfln("Total cost: $%.2f%n", total);
+        System.out.println("Confirm order? (Y/N)");
+        String confirm = scanner.nextLine();
+        if (confirm.equalsIgnoreCase("Y")) {
+            cart.getItemsOrdered().clear();
     }
-    public static void cartMenu() {
-        System.out.println("Options: ");
-        System.out.println("--------------------------------");
-        System.out.println("1. Filter medias in cart");
-        System.out.println("2. Sort medias in cart");
-        System.out.println("3. Remove media from cart");
-        System.out.println("4. Play a media");
-        System.out.println("5. Place order");
-        System.out.println("0. Back");
-        System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3-4-5");
+        System.out.println("Order placed successfully!");
     }
     }
