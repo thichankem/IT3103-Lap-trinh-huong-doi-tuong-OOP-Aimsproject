@@ -13,24 +13,24 @@ public class Cart {
         }else
         {
             itemsOrdered.add(media);
-            System.out.println("Added item" + media.getTitle() +  "to the cart");
+            System.out.println("Added" + media.getTitle() +  "to the cart");
         }
     }
     public void removeMedia(Media media) {
         if(itemsOrdered.contains(media)) {
             itemsOrdered.remove(media);
-            System.out.println("Removed item" + media.getTitle() +  "from the cart");
+            System.out.println("Removed" + media.getTitle() +  "from the cart");
         }else{
-            System.out.println("The cart has no item" + media.getTitle());
+            System.out.println("The cart has no" + media.getTitle());
         }
     }
     public void printCart(){
-        System.out.println("***********************CART***********************\n");
+        System.out.println("***********************CART************************");
         for(int i = 0; i < itemsOrdered.size(); i++){
             System.out.println((i+1) + ". "  + itemsOrdered.get(i).toString());
         }
         System.out.println("Total cost : " + totalCost() + "\n");
-        System.out.println("***********************CART***********************\n");
+        System.out.println("***********************CART***********************");
 
     }
     public float totalCost(){
@@ -44,7 +44,7 @@ public class Cart {
         boolean found = false;
         for(int i =0; i< itemsOrdered.size();i++){
             if (itemsOrdered.get(i).getTitle().equals(title)){
-                System.out.println("We found your DVD " + itemsOrdered.get(i).toString());
+                System.out.println("DVD " + itemsOrdered.get(i).toString() + "founded");
                 found = true;
             }
         }
