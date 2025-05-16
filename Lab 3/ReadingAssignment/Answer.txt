@@ -1,0 +1,15 @@
+1. Lớp nào nên implement giao diện Comparable?
+
+Lớp cần implement Comparable là lớp Media, vì Media là lớp cha của tất cả các loại phương tiện như DVD, CD, Book. Việc implement Comparable trong lớp cha sẽ giúp các lớp con tự động kế thừa và áp dụng quy tắc so sánh mặc định mà không cần phải cài đặt lại trong mỗi lớp con.
+
+2. Trong các lớp đó, phương thức compareTo() nên được triển khai như thế nào để phản ánh quy tắc sắp xếp mà chúng ta mong muốn?
+
+Trong phương thức compareTo(), chúng ta có thể so sánh các đối tượng Media theo một quy tắc sắp xếp mặc định, ví dụ: so sánh theo title (tăng dần), và sau đó so sánh theo cost (giảm dần). Đây là một cách để đảm bảo rằng các đối tượng sẽ được sắp xếp theo tiêu chí mà ta muốn.
+
+3. Liệu chúng ta có thể có nhiều quy tắc sắp xếp cho các đối tượng (ví dụ: theo title rồi cost, hoặc theo cost rồi title) khi sử dụng giao diện Comparable không?
+
+Không, khi sử dụng Comparable, chúng ta chỉ có thể định nghĩa một quy tắc so sánh duy nhất trong phương thức compareTo(). Nếu muốn hỗ trợ nhiều quy tắc so sánh khác nhau, chúng ta sẽ cần sử dụng Comparator. Comparator cho phép chúng ta tạo nhiều quy tắc so sánh khác nhau mà không làm thay đổi quy tắc so sánh mặc định của Comparable.
+
+4. Giả sử DVD có một quy tắc sắp xếp khác với các loại media khác, đó là so sánh theo title, rồi đến length giảm dần, và sau đó là cost. Làm thế nào để sửa mã để hỗ trợ điều này?
+
+Trong trường hợp này, chúng ta sẽ ghi đè phương thức compareTo() trong lớp con DigitalVideoDisc để áp dụng quy tắc sắp xếp riêng biệt cho DVD. Cụ thể, chúng ta sẽ so sánh theo title (tăng dần), sau đó là length (giảm dần), và cuối cùng là cost (tăng dần). Việc này đảm bảo rằng DVD sẽ được sắp xếp theo cách khác biệt mà không ảnh hưởng đến các lớp media khác.
