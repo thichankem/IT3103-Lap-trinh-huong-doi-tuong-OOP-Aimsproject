@@ -1,0 +1,62 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "TestViewStoreScreen",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.aims.TestViewStoreScreen",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "TestViewStoreScreen",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.test.screen.customer.TestViewStoreScreen",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "StoreManagerScreen",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.aims.screen.manager.StoreManagerScreen",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "Aims",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.aims.Aims",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "CartTest",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.test.cart.CartTest",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "StoreTest",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.test.store.StoreTest",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "TestViewStoreScreen",
+      "request": "launch",
+      "mainClass": "hust.soict.hedspi.test.screen.customer.store.TestViewStoreScreen",
+      "projectName": "FirstJavaProject_82dc195c"
+    },
+    {
+      "type": "java",
+      "name": "Run Painter with JavaFX",
+      "request": "launch",
+      "mainClass": "Painter",
+      "projectName": "FirstJavaProject_6c9e2106",
+      "vmArgs": "--module-path C:/Java/javafx-sdk-24.0.1/lib --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
