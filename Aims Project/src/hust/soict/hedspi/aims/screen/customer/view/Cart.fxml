@@ -22,13 +22,21 @@
             <Insets left="20.0" right="20.0" />
          </padding>
          <children>
-            <Label text="CART" textFill="#004cff">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Label>
-            <Region prefHeight="100.0" prefWidth="698.0" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" onAction="#btnViewStorePressed" prefHeight="71.0" prefWidth="145.0" text="View Store" />
+            <BorderPane>
+               <center>
+                  <Label text="CART" textFill="#004cff">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+            <Region prefHeight="100.0" prefWidth="698.0" />
+            <BorderPane>
+               <center>
+                  <Button mnemonicParsing="false" onAction="#btnViewStorePressed" prefHeight="71.0" prefWidth="157.0" text="View Store" />
+               </center>
+            </BorderPane>
          </children>
       </HBox>
    </top>
