@@ -4,7 +4,7 @@ import hust.soict.hedspi.aims.exception.PlayerException;
 
 public class DigitalVideoDisc extends Disc implements Playable
 {
-    public DigitalVideoDisc(String title)
+    public DigitalVideoDisc(String title, String harry_Potter_2, float par)
     {
         super(title, "", 0.0f, 0, "");
     }
